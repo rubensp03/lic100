@@ -1,0 +1,5 @@
+[
+  { "id": 1, "image": "gallery/fade-1.jpg", "category": "Fade", "title": "Mid Fade" },
+  { "id": 2, "image": "gallery/beard-1.jpg", "category": "Barba", "title": "Perfilado Premium" },
+  { "id": 3, "image": "gallery/classic-1.jpg", "category": "Clásico", "title": "Corte Clásico" }
+]

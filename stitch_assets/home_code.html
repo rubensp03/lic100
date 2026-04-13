@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE NOIR ATELIER | LIC 100 BARBERSHOP</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#353535",
+                        "secondary-fixed": "#c7c6c6",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e2e2e2",
+                        "tertiary-fixed": "#5f5e5e",
+                        "tertiary-container": "#919090",
+                        "inverse-primary": "#5d5f5f",
+                        "tertiary-fixed-dim": "#474747",
+                        "surface-tint": "#c6c6c7",
+                        "on-tertiary-fixed": "#ffffff",
+                        "on-surface-variant": "#c6c6c6",
+                        "primary-fixed": "#5d5f5f",
+                        "on-error": "#690005",
+                        "on-tertiary": "#1b1c1c",
+                        "primary-container": "#d4d4d4",
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "background": "#131313",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "outline": "#919191",
+                        "primary": "#ffffff",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e2e2e2",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#000000",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#454747",
+                        "tertiary": "#e4e2e1",
+                        "secondary-container": "#464747",
+                        "secondary-fixed-dim": "#ababab",
+                        "on-primary": "#1a1c1c",
+                        "on-background": "#e2e2e2",
+                        "surface-container-low": "#1b1b1b",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-container": "#000000",
+                        "inverse-on-surface": "#303030",
+                        "surface-bright": "#393939",
+                        "surface-variant": "#353535",
+                        "on-tertiary-fixed-variant": "#e4e2e1",
+                        "outline-variant": "#474747",
+                        "surface-container": "#1f1f1f",
+                        "secondary": "#c7c6c6",
+                        "on-secondary": "#1a1c1c",
+                        "on-primary-fixed": "#ffffff",
+                        "on-secondary-container": "#e3e2e2",
+                        "on-secondary-fixed-variant": "#3a3c3c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body {
+            background-color: #131313;
+            color: #e2e2e2;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+        .serif-hero {
+            font-family: 'Noto Serif', serif;
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-10 py-6 bg-[#131313]/70 backdrop-blur-md">
+<div class="text-xl font-['Noto_Serif'] font-bold tracking-tighter text-white">THE NOIR ATELIER</div>
+<div class="hidden md:flex space-x-10">
+<a class="text-white border-b border-white pb-1 font-['Manrope'] uppercase text-xs tracking-widest transition-opacity hover:opacity-80" href="#">Inicio</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-300 font-['Manrope'] uppercase text-xs tracking-widest" href="#services">Servicios</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-300 font-['Manrope'] uppercase text-xs tracking-widest" href="#locations">Ubicaciones</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-300 font-['Manrope'] uppercase text-xs tracking-widest" href="#">Galería</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-['Manrope'] uppercase text-xs tracking-widest font-bold hover:bg-secondary transition-colors duration-300 active:scale-95">
+            RESERVAR
+        </button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Premium Barbershop Interior" class="w-full h-full object-cover opacity-60 grayscale scale-105" data-alt="dramatic grayscale close-up of a vintage leather barber chair in a dimly lit, high-end studio with industrial textures and moody atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJpXZBpDOD5SNBpT69STKqSKAi1ijAOeVwDUrTNOMmAHVD8gyYrePLutcCOr90ML43fKyqqo8Gweykf0E1yRJbacM6y6aYCAKlR3WMWDOH8SJdEZbfqh7mQhVzaWnE0tAaL9Ym9Lo9jYSPiLXOsMW8uVD7R6Tpcuwxe3rjy3qxojhROERnXN4rJWjSqNS6XrzwshJMVxIK18L1h7TIk5b8hAyQVmRy845xV9b-0030IccYhJ3hm6RlDdIQ4RLo10Gj7TomxKg5nsY"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#131313]/40 to-[#131313]"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<p class="font-['Manrope'] uppercase text-[10px] tracking-[0.4em] mb-6 text-outline">Exclusividad &amp; Precisión</p>
+<h1 class="serif-hero text-6xl md:text-9xl font-bold tracking-tighter text-white mb-8">LIC 100</h1>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<a class="bg-white text-black px-10 py-5 font-bold uppercase text-sm tracking-widest transition-all hover:bg-secondary active:scale-95 flex items-center gap-3" href="https://booksy.com">
+                        Reservar en Booksy
+                        <span class="material-symbols-outlined">calendar_today</span>
+</a>
+<a class="border border-white/20 px-10 py-5 font-bold uppercase text-sm tracking-widest text-white hover:bg-white hover:text-black transition-all" href="#services">
+                        Ver Servicios
+                    </a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-40">
+<span class="font-['Manrope'] uppercase text-[8px] tracking-widest">Scroll</span>
+<div class="w-px h-12 bg-white/40"></div>
+</div>
+</section>
+<!-- Aesthetic Quote -->
+<section class="py-32 px-10 bg-surface flex justify-center">
+<div class="max-w-4xl text-center">
+<h2 class="serif-hero text-3xl md:text-5xl italic leading-tight text-white/90">
+                    "La arquitectura del corte no es solo técnica, es una declaración de identidad en el corazón de Santander."
+                </h2>
+<div class="mt-8 flex justify-center items-center gap-4">
+<div class="h-px w-8 bg-outline"></div>
+<p class="font-['Manrope'] uppercase text-[10px] tracking-[0.3em]">The Noir Philosophy</p>
+<div class="h-px w-8 bg-outline"></div>
+</div>
+</div>
+</section>
+<!-- Services Section: Editorial Scroller Pattern -->
+<section class="bg-surface-container-low py-32" id="services">
+<div class="px-10 mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div>
+<span class="font-['Manrope'] uppercase text-[10px] tracking-[0.4em] text-outline">Menú de Atelier</span>
+<h2 class="serif-hero text-5xl md:text-7xl font-bold text-white mt-4">Servicios</h2>
+</div>
+<p class="max-w-xs font-['Manrope'] text-sm text-on-surface-variant leading-relaxed">
+                    Cada servicio incluye asesoría personalizada, lavado con productos premium y terminación artesanal.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-y border-white/5">
+<!-- Service 1 -->
+<div class="group relative overflow-hidden aspect-[4/5] border-r border-white/5 hover:bg-surface-container transition-colors duration-500">
+<img alt="Classic Haircut" class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:opacity-40 transition-opacity duration-700" data-alt="sharp macro photograph of a barber's hands performing a precise fade with silver shears, dark monochromatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyLMwsdzGS3rZ8Rhy54RfbpwgrnqD5ZsbrOuwl4o6xWkmpRggNYRl2EG7DVFAOq6o8cF24chxYp_aVrb-VtdELswfj8ygmpE-VC17nGVSWPvqJO0_2rP8RXCKhoIaW9uFAkCafiU3-HBREGlu2fNYvEbFqdbewET3og2ijloLU0mlOaFoBhNMywwJNU0fnynCruae3x13ZHwmFwtUSQmPRjXOmKXdSEaVl14O19Rf8_ERlggMObGF2EETBOXglfc-5Tej6VtvOuRw"/>
+<div class="relative h-full p-12 flex flex-col justify-between z-10">
+<span class="text-stroke text-6xl font-bold font-['Noto_Serif']">01</span>
+<div>
+<h3 class="serif-hero text-3xl text-white mb-2">Corte Signature</h3>
+<p class="font-['Manrope'] text-xs tracking-widest text-secondary mb-6">45 MIN • 25€</p>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                                Definición total adaptada a tu fisonomía. Lavado exfoliante y peinado con arcilla mate incluido.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group relative overflow-hidden aspect-[4/5] border-r border-white/5 hover:bg-surface-container transition-colors duration-500">
+<img alt="Beard Sculpting" class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:opacity-40 transition-opacity duration-700" data-alt="close-up of a straight razor being applied to a well-groomed beard, steam rising in the background, dramatic noir lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEU_wKsMBYtMOZa0kTTShBG_rEx2IKq45hqg_ADkzaRNNgMS6HclJSqubU7CgPjCOCjsBLzt6met73ka8sOF6KnMZr6VGvYxChARZpVpYWFxPVPw6XDAtn3KdrgQhTt1nDsJou-kWNzQQi5xlm2l9H55xiG8TazpTq40kY1mmtWpy36en_r52tPaNc2TpWoy0oc5BBJUT9TwnmU3N6j3wl5_I0ubpm87tk2JDKHppeILYSytbR28hJtuhizzA-d5D_2AtcDJ2HEtU"/>
+<div class="relative h-full p-12 flex flex-col justify-between z-10">
+<span class="text-stroke text-6xl font-bold font-['Noto_Serif']">02</span>
+<div>
+<h3 class="serif-hero text-3xl text-white mb-2">Esculpido de Barba</h3>
+<p class="font-['Manrope'] text-xs tracking-widest text-secondary mb-6">30 MIN • 15€</p>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                                Diseño de barba con toalla caliente, perfilado a navaja y aceites esenciales hidratantes.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group relative overflow-hidden aspect-[4/5] hover:bg-surface-container transition-colors duration-500">
+<img alt="The Noir Experience" class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:opacity-40 transition-opacity duration-700" data-alt="overhead shot of premium grooming products on a black marble tray, minimalist composition, soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwNXZDfsorCbJ7fMAvBA9S3LnX8xFdefJL4hUMle3R-0wTFtTtQKVJ2iWUncT5nxSxHTnidvkEUJ3yM05rvekTPEaVqkRviv2VZ2d3Hl4LgPrA7b89PUPpv4gAqzslIoZAR5lTR6e7zaY7uEy0NZfRxAAfh0kDbS1HEte0DcrFNO2kHj_xGQUPX34jhtsWO0tALrlhTVgtt1oxMdlfS1WFmKS1oeDZDGlpYgswfwolEzoogYdaoQodFyA348t2Prmb-96DktzkZdI"/>
+<div class="relative h-full p-12 flex flex-col justify-between z-10">
+<span class="text-stroke text-6xl font-bold font-['Noto_Serif']">03</span>
+<div>
+<h3 class="serif-hero text-3xl text-white mb-2">Noir Experience</h3>
+<p class="font-['Manrope'] text-xs tracking-widest text-secondary mb-6">75 MIN • 38€</p>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                                El ritual completo: Corte Signature + Esculpido de barba + Tratamiento facial revitalizante.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Locations Section: Bento Grid -->
+<section class="py-32 px-10 bg-surface" id="locations">
+<div class="mb-20">
+<span class="font-['Manrope'] uppercase text-[10px] tracking-[0.4em] text-outline">Presencia Local</span>
+<h2 class="serif-hero text-5xl md:text-7xl font-bold text-white mt-4">Santander</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+<!-- Location 1 -->
+<div class="relative flex flex-col bg-surface-container p-12 group transition-all duration-500 hover:scale-[1.01]">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="location_on">location_on</span>
+<div class="text-right">
+<p class="font-['Manrope'] uppercase text-[10px] tracking-widest text-secondary mb-2">Central District</p>
+<h4 class="serif-hero text-2xl text-white">Juan de la Cosa</h4>
+</div>
+</div>
+<div class="mb-12">
+<p class="font-['Manrope'] text-lg text-white mb-2">Calle Juan de la Cosa, 13</p>
+<p class="font-['Manrope'] text-sm text-on-surface-variant">39004, Santander, Cantabria</p>
+</div>
+<div class="mt-auto flex flex-col gap-4">
+<a class="flex items-center justify-between border-b border-white/10 pb-4 group-hover:border-white transition-colors duration-300" href="https://maps.google.com" target="_blank">
+<span class="font-['Manrope'] uppercase text-xs tracking-widest">Ver en Google Maps</span>
+<span class="material-symbols-outlined">north_east</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:text-white transition-colors" href="tel:+34942000000">
+<span class="material-symbols-outlined">call</span>
+<span class="font-['Manrope'] text-sm">+34 942 00 00 00</span>
+</a>
+</div>
+</div>
+<!-- Location 2 -->
+<div class="relative flex flex-col bg-surface-container p-12 group transition-all duration-500 hover:scale-[1.01]">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="storefront">storefront</span>
+<div class="text-right">
+<p class="font-['Manrope'] uppercase text-[10px] tracking-widest text-secondary mb-2">West Side</p>
+<h4 class="serif-hero text-2xl text-white">Los Ciruelos</h4>
+</div>
+</div>
+<div class="mb-12">
+<p class="font-['Manrope'] text-lg text-white mb-2">Calle Los Ciruelos, 36</p>
+<p class="font-['Manrope'] text-sm text-on-surface-variant">39011, Santander, Cantabria</p>
+</div>
+<div class="mt-auto flex flex-col gap-4">
+<a class="flex items-center justify-between border-b border-white/10 pb-4 group-hover:border-white transition-colors duration-300" href="https://maps.google.com" target="_blank">
+<span class="font-['Manrope'] uppercase text-xs tracking-widest">Ver en Google Maps</span>
+<span class="material-symbols-outlined">north_east</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:text-white transition-colors" href="https://wa.me/34600000000">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-['Manrope'] text-sm">WhatsApp Directo</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-40 bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="text-[20vw] font-bold text-white/5 font-['Noto_Serif'] select-none">RESERVAR</span>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center px-10">
+<h2 class="serif-hero text-4xl md:text-6xl text-white mb-12">¿Listo para elevar tu imagen?</h2>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<a class="bg-primary text-on-primary px-16 py-6 font-['Manrope'] font-bold uppercase tracking-widest text-sm transition-all hover:bg-secondary active:scale-95" href="https://booksy.com">
+                        Reservar Cita Ahora
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-[#0e0e0e] border-t border-white/5 py-20 px-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-7xl mx-auto">
+<!-- Brand -->
+<div>
+<div class="font-['Noto_Serif'] text-lg text-white mb-6">THE NOIR ATELIER</div>
+<p class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-gray-500 leading-loose">
+                    ESTÉTICA MASCULINA DE ALTA GAMA.<br/>
+                    PASIÓN POR EL DETALLE.
+                </p>
+</div>
+<!-- Links -->
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<span class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-white">Social</span>
+<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-white transition-colors" href="#">Instagram</a>
+<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-white transition-colors" href="#">WhatsApp</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-white">Atelier</span>
+<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-white transition-colors" href="#">Servicios</a>
+<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-gray-500 hover:text-white transition-colors" href="#">Equipo</a>
+</div>
+</div>
+<!-- Copyright & Locations -->
+<div class="text-right md:text-left">
+<span class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-white block mb-6">Ubicaciones</span>
+<p class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-2">Calle Hernán Cortés 12</p>
+<p class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-8">Avenida de los Castros 44</p>
+<div class="pt-8 border-t border-white/5">
+<p class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-gray-500">© 2024 THE NOIR ATELIER. SANTANDER.</p>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

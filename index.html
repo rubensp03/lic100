@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberLic100 | Estilo y Precisión</title>
+</head>
+<body class="bg-bg text-primary selection:bg-accent selection:text-bg pb-20 md:pb-0">
+    <!-- Navigation (Desktop) -->
+    <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center backdrop-blur-md bg-bg/60 border-b border-white/5">
+        <div id="nav-logo-container" class="flex items-center">
+            <!-- Logo injected by TS -->
+            <div class="text-xl md:text-2xl font-black tracking-tighter text-accent uppercase">BarberLic100</div>
+        </div>
+        <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.2em] font-bold opacity-70">
+            <a href="#home" class="hover:text-accent transition-colors hover:opacity-100">Inicio</a>
+            <a href="#gallery" class="hover:text-accent transition-colors hover:opacity-100">Galería</a>
+            <a href="#location" class="hover:text-accent transition-colors hover:opacity-100">Locales</a>
+            <a href="#contact" class="hover:text-accent transition-colors hover:opacity-100">Contacto</a>
+        </div>
+        <a href="#location" class="hidden md:block bg-accent text-bg px-6 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-widest hover:scale-105 transition-transform active:scale-95 shadow-lg shadow-accent/10">
+            Pedir Cita
+        </a>
+    </nav>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="fixed bottom-6 left-6 right-6 z-50 md:hidden backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-2 shadow-2xl">
+        <div class="flex justify-around items-center">
+            <a href="#home" class="flex flex-col items-center p-2 gap-1 group active:scale-90 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover:opacity-100 transition-opacity"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span class="text-[8px] uppercase tracking-widest font-bold opacity-30 group-hover:opacity-100">Home</span>
+            </a>
+            <a href="#gallery" class="flex flex-col items-center p-2 gap-1 group active:scale-90 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover:opacity-100 transition-opacity"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                <span class="text-[8px] uppercase tracking-widest font-bold opacity-30 group-hover:opacity-100">Fotos</span>
+            </a>
+            <a href="#location" class="relative -top-6 bg-accent p-4 rounded-full shadow-lg shadow-accent/20 active:scale-90 transition-transform flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+            </a>
+            <a href="#location" class="flex flex-col items-center p-2 gap-1 group active:scale-90 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover:opacity-100 transition-opacity"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span class="text-[8px] uppercase tracking-widest font-bold opacity-30 group-hover:opacity-100">Sedes</span>
+            </a>
+            <a href="#contact" class="flex flex-col items-center p-2 gap-1 group active:scale-90 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover:opacity-100 transition-opacity"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span class="text-[8px] uppercase tracking-widest font-bold opacity-30 group-hover:opacity-100">Info</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-bg/20 via-transparent to-bg z-10"></div>
+        <div id="hero-image" class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-[center_top_20%] scale-110 opacity-30"></div>
+        
+        <div class="relative z-20 space-y-6 md:space-y-8 max-w-4xl px-4">
+            <div id="hero-title" class="opacity-0 translate-y-10">
+                <!-- Title or Logo injected by TS -->
+                <h1 class="text-5xl sm:text-7xl md:text-[10rem] font-black tracking-tighter uppercase leading-[0.85]">
+                    BarberLic100<br><span class="text-accent italic">Barbería</span>
+                </h1>
+            </div>
+            <p id="hero-slogan" class="text-base md:text-2xl text-primary/60 max-w-2xl mx-auto font-light leading-relaxed opacity-0 translate-y-10">
+                Definiendo el estándar del cuidado masculino con técnicas de vanguardia y un ambiente exclusivo.
+            </p>
+            <div id="hero-actions" class="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center pt-4 opacity-0 translate-y-10">
+                <a href="#location" class="bg-primary text-bg px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-xs uppercase tracking-widest hover:bg-accent transition-all duration-300">
+                    Nuestras Sedes
+                </a>
+                <a href="#gallery" class="group border border-primary/20 px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-[10px] md:text-xs uppercase tracking-widest hover:bg-white/5 transition-all flex items-center justify-center gap-2">
+                    Ver Galería
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 md:py-32 px-4 md:px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-4">
+            <div>
+                <span class="text-accent text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] mb-2 md:mb-4 block">Portafolio</span>
+                <h2 class="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none">Galería de <br class="hidden md:block"> <span class="opacity-50">Cortes</span></h2>
+            </div>
+            <p class="text-primary/50 max-w-xs text-xs md:text-sm leading-relaxed">Una muestra de nuestro compromiso con la perfección y el detalle en cada cliente.</p>
+        </div>
+        <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <!-- Items injected by TS -->
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-16 md:py-32 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 space-y-12 md:space-y-16">
+            <div class="text-center md:text-left max-w-2xl">
+                <span class="text-accent text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] mb-2 md:mb-4 block">Sedes en Santander</span>
+                <h2 class="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none">Nuestros <br class="hidden md:block"> <span class="opacity-50 text-primary">Espacios</span></h2>
+                <p class="mt-6 md:mt-8 text-primary/40 text-xs md:text-sm leading-relaxed max-w-sm">Elige la sede más cercana a ti y reserva tu cita cómodamente a través de Booksy.</p>
+            </div>
+            
+            <div id="locations-list" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <!-- Locations injected by TS -->
+            </div>
+
+            <div class="pt-8 md:pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-start gap-8">
+                <div class="space-y-4">
+                    <h5 class="text-[8px] md:text-[10px] uppercase tracking-widest font-black opacity-30">Horario de Atención General</h5>
+                    <div id="schedule-list" class="grid grid-cols-1 gap-1 min-w-[260px]">
+                        <!-- Schedule injected by TS -->
+                    </div>
+                </div>
+                <div class="max-w-xs text-[8px] md:text-[10px] uppercase tracking-widest leading-relaxed opacity-20">
+                    * Los horarios pueden variar según la sede o festivos. Te recomendamos consultar disponibilidad en Booksy.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Social Section -->
+    <footer id="contact" class="py-16 md:py-32 px-4 md:px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto text-center space-y-16 md:space-y-20">
+            <div class="space-y-4">
+                <h2 class="text-2xl md:text-5xl font-black tracking-tighter uppercase">Conecta con <span class="text-accent italic">BarberLic100</span></h2>
+                <div class="flex justify-center gap-8 md:gap-24 pt-8 md:pt-12">
+                    <a id="social-ig" href="#" target="_blank" class="text-xl md:text-5xl hover:text-accent transition-all hover:-translate-y-2 uppercase font-black tracking-tighter flex flex-col items-center gap-2 md:gap-3">
+                        <span class="text-[6px] md:text-[8px] tracking-[0.5em] opacity-30 font-bold">Instagram</span>
+                        <span>IG</span>
+                    </a>
+                    <a id="social-tk" href="#" target="_blank" class="text-xl md:text-5xl hover:text-accent transition-all hover:-translate-y-2 uppercase font-black tracking-tighter flex flex-col items-center gap-2 md:gap-3">
+                        <span class="text-[6px] md:text-[8px] tracking-[0.5em] opacity-30 font-bold">TikTok</span>
+                        <span>TK</span>
+                    </a>
+                    <a id="social-wa" href="#" target="_blank" class="text-xl md:text-5xl hover:text-accent transition-all hover:-translate-y-2 uppercase font-black tracking-tighter flex flex-col items-center gap-2 md:gap-3">
+                        <span class="text-[6px] md:text-[8px] tracking-[0.5em] opacity-30 font-bold">WhatsApp</span>
+                        <span>WA</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="pt-16 md:pt-20 border-t border-white/5 text-[8px] md:text-[10px] uppercase tracking-[0.5em] font-black opacity-20">
+                &copy; 2026 BarberLic100. Santander, España.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
