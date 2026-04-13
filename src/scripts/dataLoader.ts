@@ -27,14 +27,9 @@ export interface GalleryItem {
   title: string;
 }
 
+import configData from '../data/config.json';
+import galleryData from '../data/gallery.json';
+
 export const loadData = async (): Promise<{ config: Config, gallery: GalleryItem[] }> => {
-  const [configRes, galleryRes] = await Promise.all([
-    fetch('/src/data/config.json'),
-    fetch('/src/data/gallery.json')
-  ]);
-  
-  const config = await configRes.json();
-  const gallery = await galleryRes.json();
-  
-  return { config, gallery };
+  return { config: configData as Config, gallery: galleryData as GalleryItem[] };
 };
