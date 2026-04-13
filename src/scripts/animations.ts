@@ -4,6 +4,36 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+export const initPreloader = (onComplete: () => void) => {
+  const tl = gsap.timeline({
+    onComplete: () => {
+      document.body.classList.remove('overflow-hidden');
+      gsap.set('#preloader', { display: 'none' });
+      onComplete();
+    }
+  });
+
+  tl.to('#preloader-text', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: 'power4.out',
+    delay: 0.2
+  })
+  .to('#preloader-text', {
+    y: -50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power3.in',
+    delay: 0.4
+  })
+  .to('#preloader', {
+    yPercent: -100,
+    duration: 1,
+    ease: 'power4.inOut'
+  }, '-=0.2');
+};
+
 export const initHeroAnimations = () => {
   const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1.2 } });
   

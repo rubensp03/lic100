@@ -1,6 +1,6 @@
 import './style.css';
 import { loadData } from './scripts/dataLoader';
-import { initHeroAnimations, animateOnScroll, initSmoothScroll } from './scripts/animations';
+import { initPreloader, initHeroAnimations, animateOnScroll, initSmoothScroll } from './scripts/animations';
 import { initBooksy } from './scripts/booksy';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -103,15 +103,17 @@ const init = async () => {
       }
     });
 
-    // Init animations
-    initHeroAnimations();
+    // Init animations inside preloader callback
+    initPreloader(() => {
+      initHeroAnimations();
 
-    // Allow browser to paint injected content before animating
-    requestAnimationFrame(() => {
-      animateOnScroll('.gallery-item');
-      animateOnScroll('.location-card');
-      animateOnScroll('#contact h2');
-      ScrollTrigger.refresh();
+      // Allow browser to paint injected content before animating
+      requestAnimationFrame(() => {
+        animateOnScroll('.gallery-item');
+        animateOnScroll('.location-card');
+        animateOnScroll('#contact h2');
+        ScrollTrigger.refresh();
+      });
     });
     
     initSmoothScroll();

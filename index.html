@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarberLic100 | Estilo y Precisión</title>
 </head>
-<body class="bg-bg text-primary selection:bg-accent selection:text-bg pb-20 md:pb-0">
+<body class="bg-bg text-primary selection:bg-accent selection:text-bg pb-20 md:pb-0 overflow-hidden">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[100] bg-bg flex items-center justify-center pointer-events-none">
+        <div class="overflow-hidden">
+            <div id="preloader-text" class="text-3xl md:text-5xl font-black tracking-tighter uppercase italic text-accent translate-y-full opacity-0">
+                BarberLic100
+            </div>
+        </div>
+    </div>
     <!-- Navigation (Desktop) -->
     <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center backdrop-blur-md bg-bg/60 border-b border-white/5">
         <div id="nav-logo-container" class="flex items-center">
