@@ -1,5 +1,10 @@
 [
   { "id": 1, "image": "/images/midfade.webp", "category": "Fade", "title": "Mid Fade" },
-  { "id": 2, "image": "gallery/beard-1.jpg", "category": "Barba", "title": "Perfilado Premium" },
-  { "id": 3, "image": "gallery/classic-1.jpg", "category": "Clásico", "title": "Corte Clásico" }
+  { "id": 2, "image": "https://images.unsplash.com/photo-1621605815841-28d944f33bb2?auto=format&fit=crop&q=80&w=800", "category": "Barba", "title": "Perfilado Premium" },
+  { "id": 3, "image": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=800", "category": "Clásico", "title": "Corte Clásico" },
+  { "id": 4, "image": "https://images.unsplash.com/photo-1512690196252-75ca493f0b0a?auto=format&fit=crop&q=80&w=800", "category": "Estilo", "title": "Mullet Moderno" },
+  { "id": 5, "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=800", "category": "Premium", "title": "Noir Experience" },
+  { "id": 6, "image": "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&q=80&w=800", "category": "Fade", "title": "Low Fade" },
+  { "id": 7, "image": "https://images.unsplash.com/photo-1622286332618-f2803b114283?auto=format&fit=crop&q=80&w=800", "category": "Barba", "title": "Barba de Autor" },
+  { "id": 8, "image": "https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&q=80&w=800", "category": "Estilo", "title": "Buzz Cut Precision" }
 ]

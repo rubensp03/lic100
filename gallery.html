@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Completa | BarberLic100</title>
+</head>
+<body class="bg-bg text-primary selection:bg-accent selection:text-bg">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center backdrop-blur-md bg-bg/60 border-b border-white/5">
+        <a href="/" class="flex items-center gap-2 group">
+            <span class="text-accent transition-transform group-hover:-translate-x-1">←</span>
+            <div class="text-lg md:text-2xl font-black tracking-tighter text-accent uppercase">BarberLic100</div>
+        </a>
+        <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.2em] font-bold opacity-70">
+            <a href="/#home" class="hover:text-accent transition-colors hover:opacity-100">Inicio</a>
+            <a href="/#reviews" class="hover:text-accent transition-colors hover:opacity-100">Reseñas</a>
+            <a href="/#location" class="hover:text-accent transition-colors hover:opacity-100">Locales</a>
+        </div>
+        <a href="/#location" class="bg-accent text-bg px-6 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-widest hover:scale-105 transition-transform active:scale-95 shadow-lg shadow-accent/10">
+            Pedir Cita
+        </a>
+    </nav>
+
+    <!-- Gallery Header -->
+    <header class="pt-32 pb-16 px-4 md:px-6 max-w-7xl mx-auto">
+        <span class="text-accent text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] mb-4 block">Portafolio Completo</span>
+        <h1 class="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-none">Galería de <br> <span class="opacity-50">Estilo</span></h1>
+        <p class="mt-8 text-primary/50 max-w-xl text-sm md:text-base leading-relaxed">
+            Explora todos nuestros trabajos. Desde los fades más precisos hasta el cuidado de barba más exigente. 
+            Nuestra pasión por el detalle en cada corte.
+        </p>
+    </header>
+
+    <!-- Main Gallery Grid -->
+    <main class="pb-32 px-4 md:px-6 max-w-7xl mx-auto">
+        <div id="full-gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            <!-- Items injected by TS -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-16 px-4 md:px-6 border-t border-white/5 text-center">
+        <div class="text-[8px] md:text-[10px] uppercase tracking-[0.5em] font-black opacity-20">
+            &copy; 2026 BarberLic100. Santander, España.
+        </div>
+    </footer>
+
+    <script type="module" src="/src/gallery.ts"></script>
+</body>
+</html>

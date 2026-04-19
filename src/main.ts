@@ -41,10 +41,10 @@ const init = async () => {
     const heroSlogan = document.querySelector('#hero-slogan');
     if (heroSlogan) heroSlogan.textContent = config.slogan;
 
-    // Render Gallery
+    // Render Gallery (Show only first 3 in main page)
     const grid = document.querySelector('#gallery-grid');
     if (grid) {
-      grid.innerHTML = gallery.map(item => `
+      grid.innerHTML = gallery.slice(0, 3).map(item => `
         <div class="gallery-item group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-accent/30 transition-all duration-700">
           <div class="aspect-[4/5] bg-white/5 animate-pulse overflow-hidden">
              <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-all duration-700 opacity-0" onload="this.classList.remove('opacity-0'); this.parentElement.classList.remove('animate-pulse')">
