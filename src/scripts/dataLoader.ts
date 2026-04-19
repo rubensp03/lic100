@@ -40,7 +40,12 @@ export const loadData = async (): Promise<{ config: Config, gallery: GalleryItem
     try {
       const response = await fetch(config.driveEndpoint);
       if (response.ok) {
-        gallery = await response.json();
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          gallery = data;
+        } else {
+          console.warn('Drive endpoint no devolvió un array, usando fallback local', data);
+        }
       }
     } catch (e) {
       console.warn('Falla cargando desde Drive, usando fallback local', e);
