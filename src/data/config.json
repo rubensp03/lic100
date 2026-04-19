@@ -8,6 +8,7 @@
     "whatsapp": "https://wa.me/34600000000"
   },
   "booksyId": "YOUR_BOOKSY_ID_HERE",
+  "driveEndpoint": "", 
   "locations": [
     {
       "name": "Sede Los Ciruelos",

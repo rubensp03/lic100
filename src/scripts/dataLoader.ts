@@ -16,13 +16,14 @@ export interface Config {
     whatsapp: string;
   };
   booksyId: string;
+  driveEndpoint?: string;
   locations: Location[];
   schedule: Array<{ days: string; hours: string }>;
   reviews?: Array<{ author: string; text: string; rating: number; date: string }>;
 }
 
 export interface GalleryItem {
-  id: number;
+  id: string | number;
   image: string;
   category: string;
   title: string;
@@ -32,5 +33,19 @@ import configData from '../data/config.json';
 import galleryData from '../data/gallery.json';
 
 export const loadData = async (): Promise<{ config: Config, gallery: GalleryItem[] }> => {
-  return { config: configData as Config, gallery: galleryData as GalleryItem[] };
+  const config = configData as Config;
+  let gallery = galleryData as GalleryItem[];
+
+  if (config.driveEndpoint) {
+    try {
+      const response = await fetch(config.driveEndpoint);
+      if (response.ok) {
+        gallery = await response.json();
+      }
+    } catch (e) {
+      console.warn('Falla cargando desde Drive, usando fallback local', e);
+    }
+  }
+
+  return { config, gallery };
 };
