@@ -33,5 +33,25 @@
       "days": "Sábado",
       "hours": "10:00 - 15:00"
     }
+  ],
+  "reviews": [
+    {
+      "author": "Carlos M.",
+      "text": "El mejor degradado de Santander. La atención es impecable y el ambiente inmejorable. Un espacio único.",
+      "rating": 5,
+      "date": "Hace 2 semanas"
+    },
+    {
+      "author": "Javier Ruiz",
+      "text": "La Noir Experience es otro nivel. Una hora de puro relax y un acabado perfecto. Profesionalidad absoluta.",
+      "rating": 5,
+      "date": "Hace 1 mes"
+    },
+    {
+      "author": "David S.",
+      "text": "Atención al detalle y mucha pasión. Se nota la formación constante. Los mejores en Santander, sin duda.",
+      "rating": 5,
+      "date": "Hace 3 días"
+    }
   ]
 }

@@ -56,6 +56,32 @@ const init = async () => {
         </div>
       `).join('');
     }
+    
+    // Render Reviews
+    const reviewsGrid = document.querySelector('#reviews-grid');
+    if (reviewsGrid && config.reviews) {
+      reviewsGrid.innerHTML = config.reviews.map(review => `
+        <div class="review-card p-6 md:p-10 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col justify-between h-full group transition-all duration-500 hover:border-accent/30">
+          <div class="space-y-6">
+            <div class="flex gap-1 text-accent">
+              ${Array(review.rating).fill('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>').join('')}
+            </div>
+            <p class="text-lg md:text-xl font-medium italic opacity-80 leading-relaxed group-hover:opacity-100 transition-opacity">
+              "${review.text}"
+            </p>
+          </div>
+          <div class="mt-8 pt-8 border-t border-white/5 flex justify-between items-end">
+            <div>
+              <p class="text-[10px] md:text-xs font-black uppercase tracking-widest">${review.author}</p>
+              <p class="text-[8px] md:text-[10px] uppercase tracking-tighter opacity-30 mt-1">${review.date}</p>
+            </div>
+            <div class="h-4 opacity-10 grayscale brightness-200">
+               <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png" class="h-full object-contain" alt="Google">
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
 
     // Update Locations
     const locList = document.querySelector('#locations-list');
@@ -110,6 +136,7 @@ const init = async () => {
       // Allow browser to paint injected content before animating
       requestAnimationFrame(() => {
         animateOnScroll('.gallery-item');
+        animateOnScroll('.review-card');
         animateOnScroll('.location-card');
         animateOnScroll('#contact h2');
         ScrollTrigger.refresh();

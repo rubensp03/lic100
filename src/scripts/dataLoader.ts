@@ -18,6 +18,7 @@ export interface Config {
   booksyId: string;
   locations: Location[];
   schedule: Array<{ days: string; hours: string }>;
+  reviews?: Array<{ author: string; text: string; rating: number; date: string }>;
 }
 
 export interface GalleryItem {
