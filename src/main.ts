@@ -15,7 +15,7 @@ const init = async () => {
     const navLogo = document.querySelector('#nav-logo-container');
     if (navLogo && config.logo) {
       navLogo.innerHTML = `
-        <div class="h-8 w-8 md:h-10 md:w-10 mr-2 md:mr-3">
+        <div class="h-8 w-8 md:h-10 md:w-10 bg-white p-1 rounded-sm mr-2 md:mr-3">
           <img src="${config.logo}" alt="${config.name}" class="h-full w-full object-contain">
         </div>
         <div class="text-lg md:text-2xl font-black tracking-tighter text-accent uppercase">${config.name}</div>
@@ -27,8 +27,8 @@ const init = async () => {
       if (config.logo) {
         heroTitle.innerHTML = `
           <div class="flex flex-col items-center gap-4 md:gap-6">
-            <div class="max-w-[200px] sm:max-w-[280px] md:max-w-[400px]">
-              <img src="${config.logo}" alt="${config.name}" class="w-full object-contain mx-auto drop-shadow-2xl">
+            <div class="bg-white p-3 md:p-4 rounded-lg shadow-2xl shadow-white/5 border border-white/10 max-w-[200px] sm:max-w-[280px] md:max-w-[400px]">
+              <img src="${config.logo}" alt="${config.name}" class="w-full object-contain mx-auto">
             </div>
             <span class="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter uppercase italic text-accent">${config.name}</span>
           </div>
