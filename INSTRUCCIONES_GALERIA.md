@@ -15,7 +15,7 @@ Este proyecto permite que la galería de fotos se actualice automáticamente sub
 
 ```javascript
 function doGet() {
-  const folderId = 'TU_ID_DE_CARPETA_AQUÍ'; 
+  const folderId = '1-fab5OLAphxESrTtbL-vMgTdnIEd6aCw'; 
   try {
     const folder = DriveApp.getFolderById(folderId);
     const files = folder.getFiles();
@@ -32,8 +32,7 @@ function doGet() {
       }
     }
     return ContentService.createTextOutput(JSON.stringify(result))
-      .setMimeType(ContentService.MimeType.JSON)
-      .setHeader('Access-Control-Allow-Origin', '*');
+      .setMimeType(ContentService.MimeType.JSON);
   } catch (e) {
     return ContentService.createTextOutput(JSON.stringify({error: e.toString()}))
       .setMimeType(ContentService.MimeType.JSON);
