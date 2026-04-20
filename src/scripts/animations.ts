@@ -16,30 +16,30 @@ export const initPreloader = (onComplete: () => void) => {
   tl.to('#preloader-text', {
     y: 0,
     opacity: 1,
-    duration: 1,
+    duration: 0.6,
     ease: 'power4.out',
     delay: 0.2
   })
   .to('#preloader-text', {
     y: -50,
     opacity: 0,
-    duration: 0.8,
+    duration: 0.4,
     ease: 'power3.in',
-    delay: 0.4
+    delay: 0.2
   })
   .to('#preloader', {
     yPercent: -100,
-    duration: 1,
+    duration: 0.6,
     ease: 'power4.inOut'
-  }, '-=0.2');
+  }, '-=0.1');
 };
 
 export const initHeroAnimations = () => {
-  const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1.2 } });
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.8 } });
   
-  tl.to('#hero-title', { opacity: 1, y: 0, delay: 0.5 })
-    .to('#hero-slogan', { opacity: 1, y: 0 }, '-=0.8')
-    .to('#hero-actions', { opacity: 1, y: 0 }, '-=0.8');
+  tl.to('#hero-title', { opacity: 1, y: 0, delay: 0.1 })
+    .to('#hero-slogan', { opacity: 1, y: 0 }, '-=0.5')
+    .to('#hero-actions', { opacity: 1, y: 0 }, '-=0.5');
     
   // Parallax effect on hero image
   gsap.to('#hero-image', {
@@ -65,8 +65,8 @@ export const animateOnScroll = (selector: string) => {
     gsap.to(el as Element, {
       opacity: 1,
       y: 0,
-      duration: 1,
-      delay: i * 0.15,
+      duration: 0.7,
+      delay: i * 0.08,
       ease: 'power2.out',
       scrollTrigger: {
         trigger: el as Element,
