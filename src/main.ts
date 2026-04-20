@@ -15,8 +15,8 @@ const init = async () => {
     const navLogo = document.querySelector('#nav-logo-container');
     if (navLogo && config.logo) {
       navLogo.innerHTML = `
-        <div class="h-8 w-8 md:h-10 md:w-10 bg-white p-1 rounded-sm mr-2 md:mr-3">
-          <img src="${config.logo}" alt="${config.name}" class="h-full w-full object-contain">
+        <div class="h-9 w-9 md:h-11 md:w-11 bg-white/[0.95] backdrop-blur-sm p-1.5 rounded-lg mr-3 md:mr-4 border border-white/10 shadow-lg">
+          <img src="${config.logo}" alt="${config.name}" class="h-full w-full object-contain grayscale">
         </div>
         <div class="text-lg md:text-2xl font-black tracking-tighter text-accent uppercase">${config.name}</div>
       `;
@@ -27,8 +27,8 @@ const init = async () => {
       if (config.logo) {
         heroTitle.innerHTML = `
           <div class="flex flex-col items-center gap-4 md:gap-6">
-            <div class="bg-white p-3 md:p-4 rounded-lg shadow-2xl shadow-white/5 border border-white/10 max-w-[200px] sm:max-w-[280px] md:max-w-[400px]">
-              <img src="${config.logo}" alt="${config.name}" class="w-full object-contain mx-auto">
+            <div class="bg-white/[0.98] backdrop-blur-md p-6 md:p-10 rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] border border-white/20 max-w-[180px] sm:max-w-[240px] md:max-w-[340px]">
+              <img src="${config.logo}" alt="${config.name}" class="w-full h-auto object-contain mx-auto grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105">
             </div>
             <span class="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter uppercase italic text-accent">${config.name}</span>
           </div>
