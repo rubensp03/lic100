@@ -27,7 +27,7 @@ const init = async () => {
       if (config.logo) {
         heroTitle.innerHTML = `
           <div class="flex flex-col items-center gap-4 md:gap-6">
-            <div class="max-w-[180px] sm:max-w-[240px] md:max-w-[340px]">
+            <div class="max-w-[240px] sm:max-w-[320px] md:max-w-[480px]">
               <img src="${config.logo}" alt="${config.name}" class="w-full h-auto object-contain mx-auto transition-all duration-700 hover:scale-105">
             </div>
             <span class="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter uppercase italic text-accent">${config.name}</span>
