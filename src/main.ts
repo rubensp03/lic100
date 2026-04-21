@@ -15,8 +15,8 @@ const init = async () => {
     const navLogo = document.querySelector('#nav-logo-container');
     if (navLogo && config.logo) {
       navLogo.innerHTML = `
-        <div class="h-9 w-9 md:h-11 md:w-11 bg-white/[0.95] backdrop-blur-sm p-1.5 rounded-lg mr-3 md:mr-4 border border-white/10 shadow-lg">
-          <img src="${config.logo}" alt="${config.name}" class="h-full w-full object-contain grayscale">
+        <div class="h-10 w-10 md:h-14 md:w-14 mr-3 md:mr-4">
+          <img src="${config.logo}" alt="${config.name}" class="h-full w-full object-contain">
         </div>
         <div class="text-lg md:text-2xl font-black tracking-tighter text-accent uppercase">${config.name}</div>
       `;
