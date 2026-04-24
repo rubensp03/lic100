@@ -9,12 +9,12 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.0.0",
+    "@tailwindcss/vite": "^4.2.4",
     "autoprefixer": "^10.4.17",
     "gsap": "^3.14.2",
     "postcss": "^8.4.35",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.3.3",
-    "vite": "^5.1.4"
+    "vite": "^8.0.10"
   }
 }
